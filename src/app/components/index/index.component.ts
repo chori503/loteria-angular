@@ -11,7 +11,7 @@ export class IndexComponent implements OnInit {
   constructor() {
  }
   i=0;
-  finishedGame=true;
+  finishedGame=false;
   modalVisible=false;
   isModalLoading= false;
   randomCards=this.randomizedCards(LoteriaData); 
@@ -69,7 +69,8 @@ export class IndexComponent implements OnInit {
     this.modalVisible=true;
     this.killTimer();
     this.discoveredCards=[];
-    for (let index = 0; index < this.i+(this.seconds==0)?0:1; index++) {
+    const add=(this.seconds==0)?0:1;
+    for (let index = 0; index < this.i+add; index++) {
       this.discoveredCards.push(this.randomCards[index]);
     }
   }
@@ -90,9 +91,17 @@ export class IndexComponent implements OnInit {
     this.startTimer();
   }
   resetGame(){
+    this.killTimer();
     this.randomCards=[];
+    this.discoveredCards=[];
     this.randomCards=this.randomizedCards(LoteriaData); 
     this.startTimer();
     this.finishedGame=false;
+    this.modalVisible=false;
+    console.log("Vuelve a iniciar");
+    console.log(this.randomCards);
+    this.i=0;
+    this.cardImgNameSelected="";
+    this.cardNameSelected="";
   }
 }

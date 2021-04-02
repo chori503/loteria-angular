@@ -77,3 +77,8 @@
 .palette1-bg5{
   background-color: #546C49;
 }
+body{
+  background-image: url('assets/img/horizontal-lines.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}

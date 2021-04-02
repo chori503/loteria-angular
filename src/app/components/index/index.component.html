@@ -1,4 +1,4 @@
-<main class="centerHV" style="height: 80vh;">
+<main class="centerHV" style="height: 90vh;">
     <nz-card style="width: 90%;">
         <div *ngIf="!finishedGame">
             <div nz-row>
@@ -32,14 +32,14 @@
             </nz-modal>
         </div>
         <div *ngIf="finishedGame">
-            <h1 class="text-center">¡Ganaste!</h1>
+            <h1 class="text-center card-name">¡Ganaste!</h1>
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
                     <img src="./assets/img/celebrate.gif" alt="" style="margin:auto; display: block;" class="img-fluid">
                 </div>
-                <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12">
-                    <button nz-button nzType="primary" class="btn second" (click)="
-                    resetGame()" style="display: flex; justify-content: center;">¡Loteria!</button>
+                <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" style="display: flex; justify-content: center;">
+                    <button nz-button nzType="primary" class="btn second centerHV" (click)="
+                    resetGame()" style="margin: auto;">Volver a jugar</button>
                 </div>
             </div>
         </div>
