@@ -13,12 +13,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzProgressModule } from 'ng-zorro-antd/progress';
+import { IndexComponent } from './components/index/index.component';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzCardModule } from 'ng-zorro-antd/card';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { NzModalModule } from 'ng-zorro-antd/modal';
 
 registerLocaleData(es);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    IndexComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,12 @@ registerLocaleData(es);
     BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
-    NzMenuModule
+    NzMenuModule,
+    NzIconModule,
+    NzProgressModule,
+    NzGridModule,
+    NzCardModule,
+    NzModalModule
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]

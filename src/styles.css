@@ -1,1 +1,79 @@
 /* You can add global styles to this file, and also import other style files */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .img-thumbnail {
+    padding: 0.25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    height: auto;
+  }
+  .h-20{
+    height:10vh;
+  }
+  
+  .h-80{
+    height:90vh;
+  }
+  /* Color Theme Swatches in Hex */
+.Borderlands-3-1-hex { background-color: #0D2340; }
+.Borderlands-3-2-hex { background-color: #165873; }
+.Borderlands-3-3-hex { background-color: #88F2F2; }
+.Borderlands-3-4-hex { background-color: #0AA696; }
+.Borderlands-3-5-hex { background-color: #1BF2CB; }
+.container {
+  width: 100%;
+  padding-right: var(1.5rem, 0.75rem);
+  padding-left: var(1.5rem, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+.align-items-center{
+  display:flex;
+  align-items: center;
+}
+.palette1-bg1{
+  background-color: #081A31;
+}
+.palette1-bg2{
+  background-color: #E2C790;
+}
+.palette1-bg3{
+  background-color: #C7574E;
+}
+.palette1-bg4{
+  background-color: #5C253A;
+}
+.palette1-bg5{
+  background-color: #546C49;
+}

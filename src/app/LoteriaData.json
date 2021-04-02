@@ -1,0 +1,380 @@
+[
+    {
+        "id": 1,
+        "name": "El Gallo",
+        "imageName": "1_ElGallo.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 2,
+        "name": "El Diablo",
+        "imageName": "2_ElDiablo.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 3,
+        "name": "La Dama",
+        "imageName": "3_LaDama.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 4,
+        "name": "El Catrín",
+        "imageName": "4_ElCatrin.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 5,
+        "name": "El Paraguas",
+        "imageName": "5_ElParaguas.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 6,
+        "name": "La Sirena",
+        "imageName": "6_LaSirena.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 7,
+        "name": "La Escalera",
+        "imageName": "7_LaEscalera.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 8,
+        "name": "La Botella",
+        "imageName": "8_LaBotella.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 9,
+        "name": "El Barril",
+        "imageName": "9_ElBarril.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 10,
+        "name": "El Árbol",
+        "imageName": "10_ElArbol.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 11,
+        "name": "El Melón",
+        "imageName": "11_ElMelon.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 12,
+        "name": "El Valiente",
+        "imageName": "12_ElValiente.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 13,
+        "name": "El Gorrito",
+        "imageName": "13_ElGorrito.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 14,
+        "name": "La Muerte",
+        "imageName": "14_LaMuerte.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 15,
+        "name": "La Pera",
+        "imageName": "15_Lapera.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 16,
+        "name": "La Bandera",
+        "imageName": "16_LaBandera.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 17,
+        "name": "El Bandolón",
+        "imageName": "17_ElBandolon.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 18,
+        "name": "El Violonchello",
+        "imageName": "18_ElChello.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 19,
+        "name": "La Garza",
+        "imageName": "19_LaGarza.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 20,
+        "name": "El Pájaro",
+        "imageName": "20_ElPajaro.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 21,
+        "name": "La Mano",
+        "imageName": "21_LaMano.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 22,
+        "name": "La Bota",
+        "imageName": "22_LaBota.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 23,
+        "name": "La Luna",
+        "imageName": "23_LaLuna.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 24,
+        "name": "El Cotorro",
+        "imageName": "24_ElCotorro.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 25,
+        "name": "El Borracho",
+        "imageName": "25_ElBorracho.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 26,
+        "name": "El Negrito",
+        "imageName": "26_ElNegrito.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 27,
+        "name": "El Corazón",
+        "imageName": "27_ElCorazon.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 28,
+        "name": "La Sandía",
+        "imageName": "28_LaSandia.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 29,
+        "name": "El Tambor",
+        "imageName": "29_ElTambor.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 30,
+        "name": "El Camarón",
+        "imageName": "30_ElCamaron.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 31,
+        "name": "Las Jaras",
+        "imageName": "31_LasJaras.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 32,
+        "name": "El Músico",
+        "imageName": "32_ElMusico.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 33,
+        "name": "La Araña",
+        "imageName": "33_LaArana.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 34,
+        "name": "El Soldado",
+        "imageName": "34_ElSoldado.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 35,
+        "name": "La Estrella",
+        "imageName": "35_LaEstrella.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 36,
+        "name": "El Cazo",
+        "imageName": "36_ElCazo.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 37,
+        "name": "El Mundo",
+        "imageName": "37_ElMundo.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 38,
+        "name": "El Apache",
+        "imageName": "38_ElApache.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 39,
+        "name": "El Nopal",
+        "imageName": "39_ElNopal.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 40,
+        "name": "El Alacrán",
+        "imageName": "40_ElAlacran.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 41,
+        "name": "La Rosa",
+        "imageName": "41_LaRosa.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 42,
+        "name": "La Calavera",
+        "imageName": "42_LaCalavera.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 43,
+        "name": "La Campana",
+        "imageName": "43_LaCampana.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 44,
+        "name": "El Cantarito",
+        "imageName": "44_ElCantaro.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 45,
+        "name": "El Venado",
+        "imageName": "45_ElVenado.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 46,
+        "name": "El Sol",
+        "imageName": "46_ElSol.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 47,
+        "name": "La Corona",
+        "imageName": "47_LaCorona.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 48,
+        "name": "La Chalupa",
+        "imageName": "48_LaChalupa.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 49,
+        "name": "El Pino",
+        "imageName": "49_ElPino.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 50,
+        "name": "El Pescado",
+        "imageName": "50_ElPescado.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 51,
+        "name": "La Palma",
+        "imageName": "51_LaPalma.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 52,
+        "name": "La Maceta",
+        "imageName": "52_LaMaceta.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 53,
+        "name": "El Arpa",
+        "imageName": "53_ElArpa.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    },
+    {
+        "id": 54,
+        "name": "La Rana",
+        "imageName": "54_LaRana.png",
+        "imageUrl": "",
+        "audioUrl": ""
+    }
+]
