@@ -11,6 +11,7 @@ export class IndexComponent implements OnInit {
   constructor() {
  }
   i=0;
+  startGame=false;
   finishedGame=false;
   modalVisible=false;
   isModalLoading= false;
@@ -18,13 +19,13 @@ export class IndexComponent implements OnInit {
   discoveredCards:CardInfoDto[]=[];
   cardNameSelected="";
   cardImgNameSelected="";
-  maxTime: number = 3;
+  maxTime: number = 5;
   percent: number = 0;
   seconds = 0;
   end = 'Tiempo expirado';
   interval: any;
   ngOnInit() {
-    this.startTimer();
+    //this.startTimer();
     console.log("NORMAL");
     //console.log(this.initializeCards());
     console.log("-----------------");
@@ -33,24 +34,26 @@ export class IndexComponent implements OnInit {
     console.log(this.randomCards);
   }
   startTimer(): void {
-    
-    this.seconds = 0;
-    this.interval = setInterval(() => {
-      this.cardNameSelected=this.randomCards[this.i].name as string;
-      this.cardImgNameSelected="/assets/img/cards/"+this.randomCards[this.i].imageName as string;
-      this.seconds++;
-      // console.log(this.seconds);
-      this.percent = (this.seconds * 100) / this.maxTime;
-      if (this.seconds > this.maxTime) {
-        this.i++;
-        this.seconds=0;
-        this.killTimer();
-        console.log(this.i);
-        if(this.i<this.randomCards.length){
-          this.startTimer();
+    console.log("start game?"+this.startGame)
+    if(this.startGame){
+      this.seconds = 0;
+      this.interval = setInterval(() => {
+        this.cardNameSelected=this.randomCards[this.i].name as string;
+        this.cardImgNameSelected="/assets/img/cards/"+this.randomCards[this.i].imageName as string;
+        this.seconds++;
+        // console.log(this.seconds);
+        this.percent = (this.seconds * 100) / this.maxTime;
+        if (this.seconds > this.maxTime) {
+          this.i++;
+          this.seconds=0;
+          this.killTimer();
+          console.log(this.i);
+          if(this.i<this.randomCards.length){
+            this.startTimer();
+          }
         }
-      }
-    }, 1000);
+      }, 1000);
+    }
   }
   // initializeCards(){
   //   const cards: Array<CardInfoDto>=LoteriaData;
@@ -85,7 +88,11 @@ export class IndexComponent implements OnInit {
     this.finishedGame=true;
     this.killTimer();
   }
-
+  funStartGame():void{
+    this.startGame=true;
+    this.finishedGame=false;
+    this.startTimer();
+}
   handleCancel(): void {
     this.modalVisible = false;
     this.startTimer();

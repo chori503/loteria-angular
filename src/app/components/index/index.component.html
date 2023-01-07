@@ -1,6 +1,12 @@
 <main class="centerHV" style="height: 90vh;">
     <nz-card style="width: 90%;">
-        <div *ngIf="!finishedGame">
+        <div nz-row *ngIf="!startGame">
+            <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="24" [nzLg]="24" class="" style="text-align: center;">
+                <button nz-button nzType="primary" class="btn second" (click)="
+                funStartGame()" style="margin: auto;">Comenzar Juego!</button>
+            </div>
+        </div>
+        <div *ngIf="!finishedGame && startGame">
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
                     <img [src]="cardImgNameSelected" alt="" style="margin:auto; display: block;" class="img-fluid">
