@@ -4,4 +4,5 @@ export class CardInfoDto{
     imageName: string | undefined;
     imageUrl: string | undefined;
     audioUrl: string | undefined;
+    script: string[] = [];
 }

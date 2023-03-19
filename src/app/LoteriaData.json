@@ -4,377 +4,569 @@
         "name": "El Gallo",
         "imageName": "1_ElGallo.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que le cantó a San Pedro, no le volverá a cantar <b>!El Gallo¡</b>",
+            "El que le cantó a San Pedro <b>!El Gallo¡</b>"
+        ]
     },
     {
         "id": 2,
         "name": "El Diablo",
         "imageName": "2_ElDiablo.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Pórtate bien cuatito, si no te lleva el coloradito <b>!El Diablo¡</b>"
+        ]
     },
     {
         "id": 3,
         "name": "La Dama",
         "imageName": "3_LaDama.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Puliendo el paso, por toda la calle real <b>!La Dama¡</b>"
+        ]
     },
     {
         "id": 4,
         "name": "El Catrín",
         "imageName": "4_ElCatrin.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Don Ferruco el elegante su bastón quería tirar <b>!El Catrín¡</b>"
+        ]
     },
     {
         "id": 5,
         "name": "El Paraguas",
         "imageName": "5_ElParaguas.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Para el sol y para el agua <b>!El Paraguas¡</b>"
+        ]
     },
     {
         "id": 6,
         "name": "La Sirena",
         "imageName": "6_LaSirena.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Con los cantos de sirena no te vayas a marear <b>!La Sirena¡</b>",
+            "Con los cantos de sirena hasta el marino se va a marear <b>!La Sirena¡</b>",
+            "La que mita y mita, es la sirena de la mar <b>!La Sirena¡</b>"
+        ]
     },
     {
         "id": 7,
         "name": "La Escalera",
         "imageName": "7_LaEscalera.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Súbeme paso a pasito, no quieras de un brinquito <b>!La Escalera¡</b>",
+            "Súbeme paso a pasito, no quieras pegar brinquitos La escalera <b>!La Escalera¡</b>"
+        ]
     },
     {
         "id": 8,
         "name": "La Botella",
         "imageName": "8_LaBotella.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La herramienta del borracho <b>!La Botella¡</b>",
+            "La mujercita del borracho La botella <b>!La Botella¡</b>"
+        ]
     },
     {
         "id": 9,
         "name": "El Barril",
         "imageName": "9_ElBarril.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Tanto bebió el albañil, que quedó como barril <b>!El Barril¡</b>",
+            "Rueda, rueda, barrilito, no me tires el mezcal <b>!El Barril¡</b>"
+        ]
     },
     {
         "id": 10,
         "name": "El Árbol",
         "imageName": "10_ElArbol.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que a buen árbol se arrima, buena sombra le cobija <b>!El Árbol¡</b>",
+            "El que a gran árbol se arrima, que se cuide del pájaro mión <b>!El Árbol¡</b>",
+            "El árbol de la noche triste, donde me iba a llorar El árbol <b>!El Árbol¡</b>"
+        ]
     },
     {
         "id": 11,
         "name": "El Melón",
         "imageName": "11_ElMelon.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Me lo das o me lo quitas <b>!El Melón¡</b>",
+            "O me lo das o me lo quitas o pa’ mejor melón, <b>!El Melón¡</b>"
+        ]
     },
     {
         "id": 12,
         "name": "El Valiente",
         "imageName": "12_ElValiente.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Por qué le corres cobarde trayendo tan buen puñal <b>!El Valiente¡</b>",
+            "¿Matas al tigre y le sales huyendo al cuero? <b>!El Valiente¡</b>"
+        ]
     },
     {
         "id": 13,
         "name": "El Gorrito",
         "imageName": "13_ElGorrito.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Ponle su gorrito al nene, no se nos vaya a enfermar <b>!El Gorrito¡</b>",
+            "Ponle su gorrito al nene, no se nos vaya a resfriar <b>!El Gorrito¡</b>"
+        ]
     },
     {
         "id": 14,
         "name": "La Muerte",
         "imageName": "14_LaMuerte.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Aquí viene la señora muerte, la tilica y flaca <b>!La Muerte¡</b>",
+            "La muerte siriquisiaca, sentada en su buena estaca <b>!La Muerte¡</b>"
+        ]
     },
     {
         "id": 15,
         "name": "La Pera",
         "imageName": "15_Lapera.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que espera, desespera o se casa con doña Espera <b>!La Pera¡</b>",
+            "El que espera desespera, en aquel camino real La pera <b>!La Pera¡</b>"
+        ]
     },
     {
         "id": 16,
         "name": "La Bandera",
         "imageName": "16_LaBandera.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Verde, blanco y colorado, la bandera del soldado <b>!La Bandera¡</b>"
+
+        ]
     },
     {
         "id": 17,
         "name": "El Bandolón",
         "imageName": "17_ElBandolon.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Tocando su bandolón, está el mariachi Simón <b>!El Bandolón¡</b>"
+        ]
     },
     {
         "id": 18,
         "name": "El Violonchello",
         "imageName": "18_ElChello.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Como no fue violón, tuvo que ser violoncello <b>!El Violoncello¡</b>",
+            "Creciendo se fue hasta el cielo, y como no fue violín, tuvo que ser violoncello, <b>!El Violoncello¡</b>"
+        ]
     },
     {
         "id": 19,
         "name": "La Garza",
         "imageName": "19_LaGarza.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Al otro lado del río tengo mi banco donde se sienta mi chata, pico de garza morena <b>!La Garza¡</b>",
+            "Ya vinieron picos largos, de la feria de San Juan <b>!La Garza¡</b>"
+        ]
     },
     {
         "id": 20,
         "name": "El Pájaro",
         "imageName": "20_ElPajaro.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Tú me traes a puros brincos, como pájaro en la rama <b>!El Pájaro¡</b>"
+        ]
     },
     {
         "id": 21,
         "name": "La Mano",
         "imageName": "21_LaMano.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La mano más larga es la de un criminal <b>!La Mano¡</b>"
+        ]
     },
     {
         "id": 22,
         "name": "La Bota",
         "imageName": "22_LaBota.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Una bota es igual que l’otra <b>!La Bota¡</b>"
+        ]
     },
     {
         "id": 23,
         "name": "La Luna",
         "imageName": "23_LaLuna.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El farol de los enamorados <b>!La Luna¡</b>",
+            "La luna es tuerta de un ojo, y tu hermana de los dos <b>!La Luna¡</b>"
+        ]
     },
     {
         "id": 24,
         "name": "El Cotorro",
         "imageName": "24_ElCotorro.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Cotorro, da acá la pata y empiézame a platicar <b>!El Cotorro¡</b>"
+        ]
     },
     {
         "id": 25,
         "name": "El Borracho",
         "imageName": "25_ElBorracho.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "¡Ah, que borracho tan necio, ya no lo puedo aguantar! <b>!El Borracho¡</b>"
+        ]
     },
     {
         "id": 26,
         "name": "El Negrito",
         "imageName": "26_ElNegrito.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que se comió el azúcar <b>!El Negrito¡</b>",
+            "El negrito de La Habana, el que se llevó a tu hermana <b>!El Negrito¡</b>"
+        ]
     },
     {
         "id": 27,
         "name": "El Corazón",
         "imageName": "27_ElCorazon.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "No me extrañes corazón, que regreso en el camión <b>!El Corazón¡</b>"
+        ]
     },
     {
         "id": 28,
         "name": "La Sandía",
         "imageName": "28_LaSandia.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La barriga que Juan tenía, era empacho de sandía <b>!La Sandía¡</b>"
+        ]
     },
     {
         "id": 29,
         "name": "El Tambor",
         "imageName": "29_ElTambor.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "No te arrugues cuero viejo que te quiero pa’ tambor <b>!El Tambor¡</b>"
+        ]
     },
     {
         "id": 30,
         "name": "El Camarón",
         "imageName": "30_ElCamaron.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Camarón que se duerme, se lo lleva la corriente <b>!El Camarón¡</b>"
+        ]
     },
     {
         "id": 31,
         "name": "Las Jaras",
         "imageName": "31_LasJaras.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Las jaras del indio Adán, donde pegan, dan <b>!Las Jaras¡</b>"
+        ]
     },
     {
         "id": 32,
         "name": "El Músico",
         "imageName": "32_ElMusico.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El músico trompa de hule, ya no me quiere tocar <b>!El Músico¡</b>"
+        ]
     },
     {
         "id": 33,
         "name": "La Araña",
         "imageName": "33_LaArana.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Atarántamela a palos, no me la dejes llegar <b>!La Araña¡</b>"
+        ]
     },
     {
         "id": 34,
         "name": "El Soldado",
         "imageName": "34_ElSoldado.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Uno, dos y tres, el soldado p’al cuartel <b>!El Soldado¡</b>"
+        ]
     },
     {
         "id": 35,
         "name": "La Estrella",
         "imageName": "35_LaEstrella.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La guía de los marineros <b>!La Estrella¡</b>"
+        ]
     },
     {
         "id": 36,
         "name": "El Cazo",
         "imageName": "36_ElCazo.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El caso que te hago es poco <b>!El Cazo¡</b>"
+        ]
     },
     {
         "id": 37,
         "name": "El Mundo",
         "imageName": "37_ElMundo.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Este mundo es una bola y nosotros un bolón <b>!El Mundo¡</b>",
+            "El mundo se está acabando, arrímense a confesar <b>!El Mundo¡</b>"
+        ]
     },
     {
         "id": 38,
         "name": "El Apache",
         "imageName": "38_ElApache.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "¡Ay Chihuahua! cuánto apache y yo sin flechas <b>!El Apache¡</b>",
+            "¡Ay Chihuahua! cuánto apache con pantalón y huarache <b>!El Apache¡</b>",
+            "El indio apache lloraba, de ver su suerte fatal <b>!El Apache¡</b>"
+        ]
     },
     {
         "id": 39,
         "name": "El Nopal",
         "imageName": "39_ElNopal.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Al que todos van a ver, cuando tienen que comer <b>!El Nopal¡</b>",
+            "Al nopal lo van a ver, nomás cuando tiene tunas El nopal <b>!El Nopal¡</b>"
+        ]
     },
     {
         "id": 40,
         "name": "El Alacrán",
         "imageName": "40_ElAlacran.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que con la cola pica <b>!El Alacrán¡</b>",
+            "El que con la cola pica, le dan una paliza El alacrán <b>!El Alacrán¡</b>"
+        ]
     },
     {
         "id": 41,
         "name": "La Rosa",
         "imageName": "41_LaRosa.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Rosa, Rosita, Rosaura <b>!La Rosa¡</b>",
+            "Rosita, Rosaura, ven que te quiero ahora <b>!La Rosa¡</b>"
+        ]
     },
     {
         "id": 42,
         "name": "La Calavera",
         "imageName": "42_LaCalavera.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Al pasar por el panteón, me encontré un calaverón <b>!La Calavera¡</b>",
+            "Cuatro dientes y una muela <b>!La Calavera¡</b>"
+        ]
     },
     {
         "id": 43,
         "name": "La Campana",
         "imageName": "43_LaCampana.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La campana y tu debajo <b>!La Campana¡</b>",
+            "La campana y tu debajo <b>!La Campana¡</b>"
+        ]
     },
     {
         "id": 44,
         "name": "El Cantarito",
         "imageName": "44_ElCantaro.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Tanto va el cántaro al agua, que se quiebra y te moja las enaguas <b>!El Cantarito¡</b>"
+        ]
     },
     {
         "id": 45,
         "name": "El Venado",
         "imageName": "45_ElVenado.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El venado no ve nada <b>!El Venado¡</b>",
+            "Saltando va buscando, pero no ve nada <b>!El Venado¡</b>"
+        ]
     },
     {
         "id": 46,
         "name": "El Sol",
         "imageName": "46_ElSol.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "La cobija para los pobres, <b>!El Sol¡</b>",
+            "Solo te quedaste, de cobija de los pobres <b>!El Sol¡</b>"
+        ]
     },
     {
         "id": 47,
         "name": "La Corona",
         "imageName": "47_LaCorona.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El sombrero de los reyes <b>!La Corona¡</b>"
+        ]
     },
     {
         "id": 48,
         "name": "La Chalupa",
         "imageName": "48_LaChalupa.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Rema y rema va Lupita, sentada en su chalupita <b>!La Chalupa¡</b>"
+        ]
     },
     {
         "id": 49,
         "name": "El Pino",
         "imageName": "49_ElPino.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Fresco, oloroso y en todo tiempo hermoso <b>!El Pino¡</b>"
+        ]
     },
     {
         "id": 50,
         "name": "El Pescado",
         "imageName": "50_ElPescado.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que por la boca muere, aunque mudo fuere <b>!El Pescado¡</b>"
+        ]
     },
     {
         "id": 51,
         "name": "La Palma",
         "imageName": "51_LaPalma.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Palmero sube a la palma y bájame un coco <b>!La Palma¡</b>",
+            "Sube palmero a la palma, y bájame un coco <b>!La Palma¡</b>"
+        ]
     },
     {
         "id": 52,
         "name": "La Maceta",
         "imageName": "52_LaMaceta.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El que nace pa’ maceta, no sale del corredor <b>!La Maceta¡</b>"
+        ]
     },
     {
         "id": 53,
         "name": "El Arpa",
         "imageName": "53_ElArpa.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "El arpa vieja de mi suegra, ya no sirve p’a tocar <b>!El Arpa¡</b>"
+        ]
     },
     {
         "id": 54,
         "name": "La Rana",
         "imageName": "54_LaRana.png",
         "imageUrl": "",
-        "audioUrl": ""
+        "audioUrl": "",
+        "script": [
+            "Queeee saltos pegó tu hermana, <b>!La Rana¡</b>",
+            "Al ver a la verde rana, ¡qué brinco pegó tu hermana! <b>!La Rana¡</b>"
+        ]
     }
 ]

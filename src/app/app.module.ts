@@ -20,6 +20,9 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzSelectModule } from 'ng-zorro-antd/select';
+import { NzPipesModule } from 'ng-zorro-antd/pipes';
+
 
 registerLocaleData(es);
 
@@ -42,7 +45,9 @@ registerLocaleData(es);
     NzProgressModule,
     NzGridModule,
     NzCardModule,
-    NzModalModule
+    NzModalModule,
+    NzSelectModule,
+    NzPipesModule
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]
