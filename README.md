@@ -1,2 +1,0 @@
-# loteria-angular
-Loteria
