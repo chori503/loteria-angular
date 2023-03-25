@@ -7,7 +7,7 @@
             </div>
         </div>
     </nz-card>
-    <nz-card style="width: 90%; border-radius: 25px;" *ngIf="!finishedGame && startGame">
+    <nz-card style="width: 90%; border-radius: 25px; margin-top: 5%;" *ngIf="!finishedGame && startGame" [nzExtra]="extraTemplate">
         <div>
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
@@ -43,12 +43,15 @@
                 <div nz-row>
                     <div nz-col [nzXs]="24" [nzSm]="8" [nzMd]="4" [nzLg]="4" class=""
                         *ngFor="let card of discoveredCards">
-                        <img src="/assets/img/cards/{{card.imageName}}" alt="" class="img-fluid">
+                        <img src="./assets/img/cards/{{card.imageName}}" alt="" class="img-fluid">
                     </div>
                 </div>
             </nz-modal>
         </div>
     </nz-card>
+    <ng-template #extraTemplate>
+        <span nz-icon nzType="setting" [nzTheme]="'twotone'" style="cursor: pointer; font-size: 36px;" (click)="showSettingsModal()"></span>
+      </ng-template>
     <nz-card style="width: 90%; border-radius: 25px;" *ngIf="finishedGame">
         <div>
             <h1 class="text-center card-name">¡Ganaste!</h1>
@@ -63,4 +66,17 @@
             </div>
         </div>
     </nz-card>
+
+    <nz-modal [(nzVisible)]="isModalSettingsVisible" nzTitle="The first Modal" (nzOnCancel)="settingModalCancel()" (nzOnOk)="settingModalOk()">
+        <ng-container *nzModalContent>
+            <form nz-form>
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24">Duración de segundos:</nz-form-label>
+                  
+                    <nz-input-number name="maxTime" [nzSize]="'large'" [(ngModel)]="maxTime" [nzMin]="1" [nzMax]="30" [nzStep]="1" style="width: 100%;"></nz-input-number>
+                  
+                </nz-form-item>
+              </form>
+        </ng-container>
+      </nz-modal>
 </main>

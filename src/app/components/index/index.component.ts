@@ -12,6 +12,7 @@ export class IndexComponent implements OnInit {
   }
   loteriaScript = ""
   i = 0;
+  isModalSettingsVisible=false;
   startGame = false;
   finishedGame = false;
   modalVisible = false;
@@ -26,44 +27,29 @@ export class IndexComponent implements OnInit {
   end = 'Tiempo expirado';
   interval: any;
   ngOnInit() {
-    //this.startTimer();
-    console.log("NORMAL");
-    //console.log(this.initializeCards());
-    console.log("-----------------");
-    console.log("RANDOMMMMMMMMMMMMMMMMMMMMMMMM");
-    //this.randomizedCards(this.initializeCards());
-    console.log(this.randomCards);
     if (this.i == 0) {
       this.cardNameSelected = this.randomCards[this.i].name as string;
-      this.cardImgNameSelected = "/assets/img/cards/" + this.randomCards[this.i].imageName as string;
+      this.cardImgNameSelected = "./assets/img/cards/" + this.randomCards[this.i].imageName as string;
       const indexScript = randomIntFromInterval(0, this.randomCards[this.i].script.length > 0 ? this.randomCards[this.i].script.length - 1 : this.randomCards[this.i].script.length);
-      console.log("--------------------------------------")
-      console.log("Index Script: " + indexScript)
       this.loteriaScript = this.randomCards[this.i].script[indexScript]
-      console.log("Loteria Script: " + this.loteriaScript)
     }
   }
   startTimer(): void {
-    console.log("start game?" + this.startGame)
     if (this.startGame) {
       this.loteriaScript = ""
       const indexScript = randomIntFromInterval(0, this.randomCards[this.i].script.length > 0 ? this.randomCards[this.i].script.length - 1 : this.randomCards[this.i].script.length);
-      this.seconds = 0;
+      //this.seconds = 0;
       this.interval = setInterval(() => {
         this.cardNameSelected = this.randomCards[this.i].name as string;
-        this.cardImgNameSelected = "/assets/img/cards/" + this.randomCards[this.i].imageName as string;
+        this.cardImgNameSelected = "./assets/img/cards/" + this.randomCards[this.i].imageName as string;
         this.seconds++;
 
-        console.log("--------------------------------------")
-        console.log("Index Script: " + indexScript)
         this.loteriaScript = this.randomCards[this.i].script[indexScript]
-        // console.log(this.seconds);
         this.percent = (this.seconds * 100) / this.maxTime;
         if (this.seconds > this.maxTime) {
           this.i++;
           this.seconds = 0;
           this.killTimer();
-          console.log(this.i);
           if (this.i < this.randomCards.length) {
             this.startTimer();
           }
@@ -71,16 +57,10 @@ export class IndexComponent implements OnInit {
       }, 1000);
     }
   }
-  // initializeCards(){
-  //   const cards: Array<CardInfoDto>=LoteriaData;
-  //   return cards; 
-  // }
   killTimer() {
     clearInterval(this.interval);
   }
   randomizedCards(c: CardInfoDto[]) {
-    // console.log("PRE RANDOM");
-    // console.log(c);
     return c.sort(() => Math.random() - 0.5);
   }
   formatProgressBarToSeconds = () => (this.seconds <= 1) ? `${this.seconds} Seg` : `${this.seconds} Segs`;
@@ -94,8 +74,6 @@ export class IndexComponent implements OnInit {
     }
   }
   handleOk(): void {
-    console.log("Nice!");
-
     this.isModalLoading = true;
     setTimeout(() => {
       this.modalVisible = false;
@@ -114,6 +92,9 @@ export class IndexComponent implements OnInit {
     this.startTimer();
   }
   resetGame() {
+    this.i = 0;
+    this.seconds=0;
+    this.percent=0;
     this.killTimer();
     this.randomCards = [];
     this.discoveredCards = [];
@@ -121,11 +102,20 @@ export class IndexComponent implements OnInit {
     this.startTimer();
     this.finishedGame = false;
     this.modalVisible = false;
-    console.log("Vuelve a iniciar");
-    console.log(this.randomCards);
-    this.i = 0;
     this.cardImgNameSelected = "";
     this.cardNameSelected = "";
+  }
+  showSettingsModal(){
+    this.killTimer();
+    this.isModalSettingsVisible=true;
+  }
+  settingModalOk(){
+    const tempCounterSeconds=this.seconds;
+    this.settingModalCancel();
+  }
+  settingModalCancel(){
+    this.startTimer();
+    this.isModalSettingsVisible=false;
   }
 }
 
