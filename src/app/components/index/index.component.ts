@@ -10,6 +10,7 @@ export class IndexComponent implements OnInit {
 
   constructor() {
   }
+  isCelebrating=false;
   loteriaScript = ""
   i = 0;
   isModalSettingsVisible=false;
@@ -74,6 +75,8 @@ export class IndexComponent implements OnInit {
     }
   }
   handleOk(): void {
+    this.isCelebrating=true;
+    console.log("CELENRATING:" + this.isCelebrating)
     this.isModalLoading = true;
     setTimeout(() => {
       this.modalVisible = false;
@@ -92,6 +95,7 @@ export class IndexComponent implements OnInit {
     this.startTimer();
   }
   resetGame() {
+    this.isCelebrating=false;
     this.i = 0;
     this.seconds=0;
     this.percent=0;

@@ -53,11 +53,13 @@
         <span nz-icon nzType="setting" [nzTheme]="'twotone'" style="cursor: pointer; font-size: 36px;" (click)="showSettingsModal()"></span>
       </ng-template>
     <nz-card style="width: 90%; border-radius: 25px;" *ngIf="finishedGame">
+        <div class="celebration-container" *ngIf="isCelebrating">   
+        </div>
         <div>
             <h1 class="text-center card-name">¡Ganaste!</h1>
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
-                    <img src="./assets/img/celebrate.gif" alt="" style="margin:auto; display: block;" class="img-fluid">
+                    <img src="./assets/img/celebrate3.gif" alt="" style="margin:auto; display: block; border-radius: 16px;" class="img-fluid">
                 </div>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" style="display: flex; justify-content: center;">
                     <button nz-button nzType="primary" class="btn second centerHV" (click)="
