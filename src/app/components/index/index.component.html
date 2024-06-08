@@ -7,7 +7,8 @@
             </div>
         </div>
     </nz-card>
-    <nz-card style="width: 90%; border-radius: 25px; margin-top: 5%;" *ngIf="!finishedGame && startGame" [nzExtra]="extraTemplate">
+    <nz-card style="width: 90%; border-radius: 25px; margin-top: 5%;" *ngIf="!finishedGame && startGame"
+        [nzExtra]="extraTemplate">
         <div>
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
@@ -20,7 +21,7 @@
                         [nzStrokeColor]="{ '0%': '#108ee9', '100%': '#87d068' }"
                         [nzFormat]="formatProgressBarToSeconds">
                     </nz-progress>
-                    <p [innerHTML]="loteriaScript" style="text-align: center; margin-top: 25px; font-size: large;"></p>
+                    <p [innerHTML]="loteriaScript" style="text-align: center; margin-top: 25px; font-size: 27px;"></p>
                 </div>
             </div>
             <div nz-row>
@@ -30,14 +31,17 @@
                 </div>
             </div>
             <!-- Modal to see cards after press button Loteria! -->
-            <nz-modal [(nzVisible)]="modalVisible" nzTitle="¡Loteria!" (nzOnCancel)="handleCancel()"
-                (nzOnOk)="handleOk()" [nzOkLoading]="isModalLoading" nzWidth="95vw">
+            <nz-modal (keyup.enter)="handleOk()" [(nzVisible)]="modalVisible" nzTitle="¡Loteria!"
+                (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()" [nzOkLoading]="isModalLoading" nzWidth="95vw">
                 <div nz-row>
                     <div nz-col [nzXs]="24" [nzSm]="18" [nzMd]="12" [nzLg]="12" class="">
                         <label style="font-weight: bold;">Buscar:</label><br><br>
-                        <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Escribe el nombre de la carta" style="width: 40%;">
-                            <nz-option  *ngFor="let card of discoveredCards" nzLabel="{{card.name}}" nzValue="{{card.id}}"></nz-option>
-                          </nz-select>
+                        <nz-select nzShowSearch nzAllowClear nzPlaceHolder="Escribe el nombre de la carta"
+                            style="width: 40%;">
+                            <nz-option *ngFor="let card of discoveredCards"
+                                nzLabel="{{card.name?.replace('á','a')?.replace('Á','A')?.replace('é','e')?.replace('É','E')?.replace('í','i')?.replace('Í','I')?.replace('ó','o')?.replace('Ó','O')?.replace('ú','u')?.replace('Ú','U')}}"
+                                nzValue="{{card.id}}"></nz-option>
+                        </nz-select>
                     </div>
                 </div>
                 <div nz-row>
@@ -50,18 +54,21 @@
         </div>
     </nz-card>
     <ng-template #extraTemplate>
-        <span nz-icon nzType="setting" [nzTheme]="'twotone'" style="cursor: pointer; font-size: 36px;" (click)="showSettingsModal()"></span>
-      </ng-template>
+        <span nz-icon nzType="setting" [nzTheme]="'twotone'" style="cursor: pointer; font-size: 36px;"
+            (click)="showSettingsModal()"></span>
+    </ng-template>
     <nz-card style="width: 90%; border-radius: 25px;" *ngIf="finishedGame">
-        <div class="celebration-container" *ngIf="isCelebrating">   
+        <div class="celebration-container" *ngIf="isCelebrating">
         </div>
         <div>
             <h1 class="text-center card-name">¡Ganaste!</h1>
             <div nz-row>
                 <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" class="">
-                    <img src="./assets/img/celebrate3.gif" alt="" style="margin:auto; display: block; border-radius: 16px;" class="img-fluid">
+                    <img src="./assets/img/celebrate3.gif" alt=""
+                        style="margin:auto; display: block; border-radius: 16px;" class="img-fluid">
                 </div>
-                <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12" style="display: flex; justify-content: center;">
+                <div nz-col [nzXs]="24" [nzSm]="24" [nzMd]="12" [nzLg]="12"
+                    style="display: flex; justify-content: center;">
                     <button nz-button nzType="primary" class="btn second centerHV" (click)="
                     resetGame()" style="margin: auto;">Volver a jugar</button>
                 </div>
@@ -69,16 +76,18 @@
         </div>
     </nz-card>
 
-    <nz-modal [(nzVisible)]="isModalSettingsVisible" nzTitle="The first Modal" (nzOnCancel)="settingModalCancel()" (nzOnOk)="settingModalOk()">
+    <nz-modal [(nzVisible)]="isModalSettingsVisible" nzTitle="Settings" (nzOnCancel)="settingModalCancel()"
+        (nzOnOk)="settingModalOk()">
         <ng-container *nzModalContent>
-            <form nz-form>
+            <form nz-form (keyup.enter)="settingModalOk()">
                 <nz-form-item>
-                  <nz-form-label [nzSpan]="24">Duración de segundos:</nz-form-label>
-                  
-                    <nz-input-number name="maxTime" [nzSize]="'large'" [(ngModel)]="maxTime" [nzMin]="1" [nzMax]="30" [nzStep]="1" style="width: 100%;"></nz-input-number>
-                  
+                    <nz-form-label [nzSpan]="24">Duración de segundos:</nz-form-label>
+
+                    <nz-input-number name="maxTime" [nzSize]="'large'" [(ngModel)]="maxTime" [nzMin]="1" [nzMax]="30"
+                        [nzStep]="1" style="width: 100%;"></nz-input-number>
+
                 </nz-form-item>
-              </form>
+            </form>
         </ng-container>
-      </nz-modal>
+    </nz-modal>
 </main>
