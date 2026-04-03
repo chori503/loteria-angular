@@ -23,7 +23,7 @@ import { NavigationComponent } from './components/navigation/navigation.componen
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
-
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 registerLocaleData(es);
 
@@ -50,7 +50,8 @@ registerLocaleData(es);
     NzSelectModule,
     NzPipesModule,
     NzFormModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzButtonModule
   ],
   providers: [{ provide: NZ_I18N, useValue: es_ES }],
   bootstrap: [AppComponent]

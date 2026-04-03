@@ -1,47 +1,86 @@
-.inner-box {
-  background: #0092ff;
-  padding: 8px 0;
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
 }
 
+/* =========================
+   CARDS
+========================= */
+.card-start {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 25px;
+}
+
+.card-game,
+.card-finish {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 25px;
+}
+
+/* =========================
+   TEXTO
+========================= */
 .card-name {
-  font-size: 60px;
+  font-size: clamp(32px, 5vw, 60px);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text-center {
   text-align: center;
 }
 
+/* =========================
+   IMÁGENES
+========================= */
+.img-fluid {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+
+/* =========================
+   CENTRADO
+========================= */
 .centerHV {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Boton loteria */
+/* =========================
+   BOTONES
+========================= */
 .btn {
   box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   appearance: none;
   background-color: transparent;
   border: 2px solid #e74c3c;
   border-radius: 0.6em;
   color: #e74c3c;
   cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 1;
-  margin: 20px;
+  margin: 20px auto;
   padding: 1.2em 2.8em;
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
@@ -52,15 +91,55 @@
   outline: 0;
 }
 
+/* Botón verde */
 .second {
   border-radius: 3em;
   border-color: #1abc9c;
   color: #fff;
-  background-image: -webkit-linear-gradient(left, rgba(26, 188, 156, 0.6), rgba(26, 188, 156, 0.6) 5%, #1abc9c 5%, #1abc9c 10%, rgba(26, 188, 156, 0.6) 10%, rgba(26, 188, 156, 0.6) 15%, #1abc9c 15%, #1abc9c 20%, rgba(26, 188, 156, 0.6) 20%, rgba(26, 188, 156, 0.6) 25%, #1abc9c 25%, #1abc9c 30%, rgba(26, 188, 156, 0.6) 30%, rgba(26, 188, 156, 0.6) 35%, #1abc9c 35%, #1abc9c 40%, rgba(26, 188, 156, 0.6) 40%, rgba(26, 188, 156, 0.6) 45%, #1abc9c 45%, #1abc9c 50%, rgba(26, 188, 156, 0.6) 50%, rgba(26, 188, 156, 0.6) 55%, #1abc9c 55%, #1abc9c 60%, rgba(26, 188, 156, 0.6) 60%, rgba(26, 188, 156, 0.6) 65%, #1abc9c 65%, #1abc9c 70%, rgba(26, 188, 156, 0.6) 70%, rgba(26, 188, 156, 0.6) 75%, #1abc9c 75%, #1abc9c 80%, rgba(26, 188, 156, 0.6) 80%, rgba(26, 188, 156, 0.6) 85%, #1abc9c 85%, #1abc9c 90%, rgba(26, 188, 156, 0.6) 90%, rgba(26, 188, 156, 0.6) 95%, #1abc9c 95%, #1abc9c 100%);
-  background-image: linear-gradient(to right, rgba(26, 188, 156, 0.6), rgba(26, 188, 156, 0.6) 5%, #1abc9c 5%, #1abc9c 10%, rgba(26, 188, 156, 0.6) 10%, rgba(26, 188, 156, 0.6) 15%, #1abc9c 15%, #1abc9c 20%, rgba(26, 188, 156, 0.6) 20%, rgba(26, 188, 156, 0.6) 25%, #1abc9c 25%, #1abc9c 30%, rgba(26, 188, 156, 0.6) 30%, rgba(26, 188, 156, 0.6) 35%, #1abc9c 35%, #1abc9c 40%, rgba(26, 188, 156, 0.6) 40%, rgba(26, 188, 156, 0.6) 45%, #1abc9c 45%, #1abc9c 50%, rgba(26, 188, 156, 0.6) 50%, rgba(26, 188, 156, 0.6) 55%, #1abc9c 55%, #1abc9c 60%, rgba(26, 188, 156, 0.6) 60%, rgba(26, 188, 156, 0.6) 65%, #1abc9c 65%, #1abc9c 70%, rgba(26, 188, 156, 0.6) 70%, rgba(26, 188, 156, 0.6) 75%, #1abc9c 75%, #1abc9c 80%, rgba(26, 188, 156, 0.6) 80%, rgba(26, 188, 156, 0.6) 85%, #1abc9c 85%, #1abc9c 90%, rgba(26, 188, 156, 0.6) 90%, rgba(26, 188, 156, 0.6) 95%, #1abc9c 95%, #1abc9c 100%);
-  background-position: 0 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(26, 188, 156, 0.6) 0%,
+    rgba(26, 188, 156, 0.6) 5%,
+    #1abc9c 5%,
+    #1abc9c 10%,
+    rgba(26, 188, 156, 0.6) 10%,
+    rgba(26, 188, 156, 0.6) 15%,
+    #1abc9c 15%,
+    #1abc9c 20%,
+    rgba(26, 188, 156, 0.6) 20%,
+    rgba(26, 188, 156, 0.6) 25%,
+    #1abc9c 25%,
+    #1abc9c 30%,
+    rgba(26, 188, 156, 0.6) 30%,
+    rgba(26, 188, 156, 0.6) 35%,
+    #1abc9c 35%,
+    #1abc9c 40%,
+    rgba(26, 188, 156, 0.6) 40%,
+    rgba(26, 188, 156, 0.6) 45%,
+    #1abc9c 45%,
+    #1abc9c 50%,
+    rgba(26, 188, 156, 0.6) 50%,
+    rgba(26, 188, 156, 0.6) 55%,
+    #1abc9c 55%,
+    #1abc9c 60%,
+    rgba(26, 188, 156, 0.6) 60%,
+    rgba(26, 188, 156, 0.6) 65%,
+    #1abc9c 65%,
+    #1abc9c 70%,
+    rgba(26, 188, 156, 0.6) 70%,
+    rgba(26, 188, 156, 0.6) 75%,
+    #1abc9c 75%,
+    #1abc9c 80%,
+    rgba(26, 188, 156, 0.6) 80%,
+    rgba(26, 188, 156, 0.6) 85%,
+    #1abc9c 85%,
+    #1abc9c 90%,
+    rgba(26, 188, 156, 0.6) 90%,
+    rgba(26, 188, 156, 0.6) 95%,
+    #1abc9c 95%,
+    #1abc9c 100%
+  );
   background-size: 100%;
-  -webkit-transition: background 300ms ease-in-out;
   transition: background 300ms ease-in-out;
 }
 
@@ -68,19 +147,64 @@
   background-position: 100px;
 }
 
-.text-center {
-  text-align: center;
-}
-
+/* =========================
+   CELEBRACIÓN
+========================= */
 .celebration-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-   /* Color del fondo con transparencia */
+  background-image: url('/././assets/img/confetti.svg');
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/././assets/img/confetti.svg');
 }
+
+/* =========================
+   RESPONSIVE (MÓVIL)
+========================= */
+@media (max-width: 768px) {
+
+  .main-container {
+    align-items: flex-start;
+  }
+
+  .img-fluid {
+    max-width: 280px;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 0.8em 1.6em;
+  }
+
+}
+
+
+/* =========================*/
+/*   SPIN LOADING     */
+.app-loading {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ddd;
+  border-top: 6px solid #1890ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* =========================*/

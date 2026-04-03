@@ -1,6 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CardInfoDto } from 'src/app/dto/CardInfoDto';
 import LoteriaData from 'src/app/LoteriaData.json';
+import LoteriaTables from 'src/app/LoteriaTables.json';
+import { NzInputNumberComponent } from 'ng-zorro-antd/input-number';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -10,15 +14,21 @@ export class IndexComponent implements OnInit {
 
   constructor() {
   }
-  isCelebrating=false;
+  isAppLoading = true;
+  imagesLoaded = 0;
+  totalImages = 0;
+  isCelebrating = false;
   loteriaScript = ""
   i = 0;
-  isModalSettingsVisible=false;
+  isModalSettingsVisible = false;
   startGame = false;
   finishedGame = false;
   modalVisible = false;
   isModalLoading = false;
   randomCards = this.randomizedCards(LoteriaData);
+  //tablas de loteria
+  loteriaTables = LoteriaTables;
+  totalTables = LoteriaTables.length;
   discoveredCards: CardInfoDto[] = [];
   cardNameSelected = "";
   cardImgNameSelected = "";
@@ -27,13 +37,50 @@ export class IndexComponent implements OnInit {
   seconds = 0;
   end = 'Tiempo expirado';
   interval: any;
+  tableResults: { [key: number]: boolean | null } = {};
   ngOnInit() {
+    this.preloadImages(this.randomCards);
     if (this.i == 0) {
       this.cardNameSelected = this.randomCards[this.i].name as string;
       this.cardImgNameSelected = "./assets/img/cards/" + this.randomCards[this.i].imageName as string;
       const indexScript = randomIntFromInterval(0, this.randomCards[this.i].script.length > 0 ? this.randomCards[this.i].script.length - 1 : this.randomCards[this.i].script.length);
       this.loteriaScript = this.randomCards[this.i].script[indexScript]
     }
+  }
+
+
+  @ViewChild('maxTimeInput') maxTimeInput!: NzInputNumberComponent;
+  focusMaxTimeInput(): void {
+    setTimeout(() => {
+      this.maxTimeInput?.focus();
+    });
+  }
+  preloadImages(cards: CardInfoDto[]): void {
+    this.totalImages = cards.length;
+    this.imagesLoaded = 0;
+
+    cards.forEach(card => {
+      const img = new Image();
+
+      img.onload = () => {
+        this.imagesLoaded++;
+
+        if (this.imagesLoaded === this.totalImages) {
+          this.isAppLoading = false;
+          console.log('Imágenes precargadas');
+        }
+      };
+
+      img.onerror = () => {
+        // Evita que una imagen rota bloquee la app
+        this.imagesLoaded++;
+        if (this.imagesLoaded === this.totalImages) {
+          this.isAppLoading = false;
+        }
+      };
+
+      img.src = `./assets/img/cards/${card.imageName}`;
+    });
   }
   startTimer(): void {
     if (this.startGame) {
@@ -67,6 +114,7 @@ export class IndexComponent implements OnInit {
   formatProgressBarToSeconds = () => (this.seconds <= 1) ? `${this.seconds} Seg` : `${this.seconds} Segs`;
   showModal(): void {
     this.modalVisible = true;
+    this.tableResults = {};
     this.killTimer();
     this.discoveredCards = [];
     const add = (this.seconds == 0) ? 0 : 1;
@@ -74,8 +122,13 @@ export class IndexComponent implements OnInit {
       this.discoveredCards.push(this.randomCards[index]);
     }
   }
+  evaluateTable(table: any): void {
+    const discoveredIds = new Set(this.discoveredCards.map(c => c.id));
+    const allMatch = table.cardIds.every((id: number) => discoveredIds.has(id));
+    this.tableResults[table.id] = allMatch;
+  }
   handleOk(): void {
-    this.isCelebrating=true;
+    this.isCelebrating = true;
     console.log("CELENRATING:" + this.isCelebrating)
     this.isModalLoading = true;
     setTimeout(() => {
@@ -95,10 +148,10 @@ export class IndexComponent implements OnInit {
     this.startTimer();
   }
   resetGame() {
-    this.isCelebrating=false;
+    this.isCelebrating = false;
     this.i = 0;
-    this.seconds=0;
-    this.percent=0;
+    this.seconds = 0;
+    this.percent = 0;
     this.killTimer();
     this.randomCards = [];
     this.discoveredCards = [];
@@ -109,17 +162,17 @@ export class IndexComponent implements OnInit {
     this.cardImgNameSelected = "";
     this.cardNameSelected = "";
   }
-  showSettingsModal(){
+  showSettingsModal() {
     this.killTimer();
-    this.isModalSettingsVisible=true;
+    this.isModalSettingsVisible = true;
   }
-  settingModalOk(){
-    const tempCounterSeconds=this.seconds;
+  settingModalOk() {
+    const tempCounterSeconds = this.seconds;
     this.settingModalCancel();
   }
-  settingModalCancel(){
+  settingModalCancel() {
     this.startTimer();
-    this.isModalSettingsVisible=false;
+    this.isModalSettingsVisible = false;
   }
 }
 
