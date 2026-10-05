@@ -23,11 +23,28 @@
             },
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": ["zone.js"],
+            "polyfills": [
+              "zone.js"
+            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets",
+                "ignore": [
+                  "img/cards/*.png",
+                  "img/celebrate.gif",
+                  "img/celebrate2.gif",
+                  "img/ballons1.gif",
+                  "img/confetti1.gif",
+                  "img/confetti2.gif",
+                  "img/rainLines.svg",
+                  "img/confetti.svg",
+                  "img/horizontal-lines.svg"
+                ]
+              },
               {
                 "glob": "**/*",
                 "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
@@ -39,7 +56,9 @@
               "src/styles.css"
             ],
             "stylePreprocessorOptions": {
-              "includePaths": ["node_modules"]
+              "includePaths": [
+                "node_modules"
+              ]
             }
           },
           "configurations": {

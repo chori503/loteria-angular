@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "El Gallo",
-        "imageName": "1_ElGallo.png",
+        "imageName": "1_ElGallo.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -13,7 +13,7 @@
     {
         "id": 2,
         "name": "El Diablo",
-        "imageName": "2_ElDiablo.png",
+        "imageName": "2_ElDiablo.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -23,7 +23,7 @@
     {
         "id": 3,
         "name": "La Dama",
-        "imageName": "3_LaDama.png",
+        "imageName": "3_LaDama.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -33,7 +33,7 @@
     {
         "id": 4,
         "name": "El Catrín",
-        "imageName": "4_ElCatrin.png",
+        "imageName": "4_ElCatrin.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -43,7 +43,7 @@
     {
         "id": 5,
         "name": "El Paraguas",
-        "imageName": "5_ElParaguas.png",
+        "imageName": "5_ElParaguas.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -53,7 +53,7 @@
     {
         "id": 6,
         "name": "La Sirena",
-        "imageName": "6_LaSirena.png",
+        "imageName": "6_LaSirena.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -65,7 +65,7 @@
     {
         "id": 7,
         "name": "La Escalera",
-        "imageName": "7_LaEscalera.png",
+        "imageName": "7_LaEscalera.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -76,7 +76,7 @@
     {
         "id": 8,
         "name": "La Botella",
-        "imageName": "8_LaBotella.png",
+        "imageName": "8_LaBotella.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -87,7 +87,7 @@
     {
         "id": 9,
         "name": "El Barril",
-        "imageName": "9_ElBarril.png",
+        "imageName": "9_ElBarril.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -98,7 +98,7 @@
     {
         "id": 10,
         "name": "El Árbol",
-        "imageName": "10_ElArbol.png",
+        "imageName": "10_ElArbol.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -110,7 +110,7 @@
     {
         "id": 11,
         "name": "El Melón",
-        "imageName": "11_ElMelon.png",
+        "imageName": "11_ElMelon.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -121,7 +121,7 @@
     {
         "id": 12,
         "name": "El Valiente",
-        "imageName": "12_ElValiente.png",
+        "imageName": "12_ElValiente.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -132,7 +132,7 @@
     {
         "id": 13,
         "name": "El Gorrito",
-        "imageName": "13_ElGorrito.png",
+        "imageName": "13_ElGorrito.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -143,7 +143,7 @@
     {
         "id": 14,
         "name": "La Muerte",
-        "imageName": "14_LaMuerte.png",
+        "imageName": "14_LaMuerte.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -154,7 +154,7 @@
     {
         "id": 15,
         "name": "La Pera",
-        "imageName": "15_Lapera.png",
+        "imageName": "15_Lapera.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -165,7 +165,7 @@
     {
         "id": 16,
         "name": "La Bandera",
-        "imageName": "16_LaBandera.png",
+        "imageName": "16_LaBandera.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -176,7 +176,7 @@
     {
         "id": 17,
         "name": "El Bandolón",
-        "imageName": "17_ElBandolon.png",
+        "imageName": "17_ElBandolon.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -186,7 +186,7 @@
     {
         "id": 18,
         "name": "El Violonchello",
-        "imageName": "18_ElChello.png",
+        "imageName": "18_ElChello.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -197,7 +197,7 @@
     {
         "id": 19,
         "name": "La Garza",
-        "imageName": "19_LaGarza.png",
+        "imageName": "19_LaGarza.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -208,7 +208,7 @@
     {
         "id": 20,
         "name": "El Pájaro",
-        "imageName": "20_ElPajaro.png",
+        "imageName": "20_ElPajaro.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -218,7 +218,7 @@
     {
         "id": 21,
         "name": "La Mano",
-        "imageName": "21_LaMano.png",
+        "imageName": "21_LaMano.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -228,7 +228,7 @@
     {
         "id": 22,
         "name": "La Bota",
-        "imageName": "22_LaBota.png",
+        "imageName": "22_LaBota.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -238,7 +238,7 @@
     {
         "id": 23,
         "name": "La Luna",
-        "imageName": "23_LaLuna.png",
+        "imageName": "23_LaLuna.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -249,7 +249,7 @@
     {
         "id": 24,
         "name": "El Cotorro",
-        "imageName": "24_ElCotorro.png",
+        "imageName": "24_ElCotorro.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -259,7 +259,7 @@
     {
         "id": 25,
         "name": "El Borracho",
-        "imageName": "25_ElBorracho.png",
+        "imageName": "25_ElBorracho.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -269,7 +269,7 @@
     {
         "id": 26,
         "name": "El Negrito",
-        "imageName": "26_ElNegrito.png",
+        "imageName": "26_ElNegrito.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -280,7 +280,7 @@
     {
         "id": 27,
         "name": "El Corazón",
-        "imageName": "27_ElCorazon.png",
+        "imageName": "27_ElCorazon.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -290,7 +290,7 @@
     {
         "id": 28,
         "name": "La Sandía",
-        "imageName": "28_LaSandia.png",
+        "imageName": "28_LaSandia.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -300,7 +300,7 @@
     {
         "id": 29,
         "name": "El Tambor",
-        "imageName": "29_ElTambor.png",
+        "imageName": "29_ElTambor.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -310,7 +310,7 @@
     {
         "id": 30,
         "name": "El Camarón",
-        "imageName": "30_ElCamaron.png",
+        "imageName": "30_ElCamaron.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -320,7 +320,7 @@
     {
         "id": 31,
         "name": "Las Jaras",
-        "imageName": "31_LasJaras.png",
+        "imageName": "31_LasJaras.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -330,7 +330,7 @@
     {
         "id": 32,
         "name": "El Músico",
-        "imageName": "32_ElMusico.png",
+        "imageName": "32_ElMusico.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -340,7 +340,7 @@
     {
         "id": 33,
         "name": "La Araña",
-        "imageName": "33_LaArana.png",
+        "imageName": "33_LaArana.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -350,7 +350,7 @@
     {
         "id": 34,
         "name": "El Soldado",
-        "imageName": "34_ElSoldado.png",
+        "imageName": "34_ElSoldado.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -360,7 +360,7 @@
     {
         "id": 35,
         "name": "La Estrella",
-        "imageName": "35_LaEstrella.png",
+        "imageName": "35_LaEstrella.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -370,7 +370,7 @@
     {
         "id": 36,
         "name": "El Cazo",
-        "imageName": "36_ElCazo.png",
+        "imageName": "36_ElCazo.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -380,7 +380,7 @@
     {
         "id": 37,
         "name": "El Mundo",
-        "imageName": "37_ElMundo.png",
+        "imageName": "37_ElMundo.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -391,7 +391,7 @@
     {
         "id": 38,
         "name": "El Apache",
-        "imageName": "38_ElApache.png",
+        "imageName": "38_ElApache.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -403,7 +403,7 @@
     {
         "id": 39,
         "name": "El Nopal",
-        "imageName": "39_ElNopal.png",
+        "imageName": "39_ElNopal.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -414,7 +414,7 @@
     {
         "id": 40,
         "name": "El Alacrán",
-        "imageName": "40_ElAlacran.png",
+        "imageName": "40_ElAlacran.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -425,7 +425,7 @@
     {
         "id": 41,
         "name": "La Rosa",
-        "imageName": "41_LaRosa.png",
+        "imageName": "41_LaRosa.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -436,7 +436,7 @@
     {
         "id": 42,
         "name": "La Calavera",
-        "imageName": "42_LaCalavera.png",
+        "imageName": "42_LaCalavera.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -447,7 +447,7 @@
     {
         "id": 43,
         "name": "La Campana",
-        "imageName": "43_LaCampana.png",
+        "imageName": "43_LaCampana.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -458,7 +458,7 @@
     {
         "id": 44,
         "name": "El Cantarito",
-        "imageName": "44_ElCantaro.png",
+        "imageName": "44_ElCantaro.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -468,7 +468,7 @@
     {
         "id": 45,
         "name": "El Venado",
-        "imageName": "45_ElVenado.png",
+        "imageName": "45_ElVenado.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -479,7 +479,7 @@
     {
         "id": 46,
         "name": "El Sol",
-        "imageName": "46_ElSol.png",
+        "imageName": "46_ElSol.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -490,7 +490,7 @@
     {
         "id": 47,
         "name": "La Corona",
-        "imageName": "47_LaCorona.png",
+        "imageName": "47_LaCorona.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -500,7 +500,7 @@
     {
         "id": 48,
         "name": "La Chalupa",
-        "imageName": "48_LaChalupa.png",
+        "imageName": "48_LaChalupa.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -510,7 +510,7 @@
     {
         "id": 49,
         "name": "El Pino",
-        "imageName": "49_ElPino.png",
+        "imageName": "49_ElPino.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -520,7 +520,7 @@
     {
         "id": 50,
         "name": "El Pescado",
-        "imageName": "50_ElPescado.png",
+        "imageName": "50_ElPescado.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -530,7 +530,7 @@
     {
         "id": 51,
         "name": "La Palma",
-        "imageName": "51_LaPalma.png",
+        "imageName": "51_LaPalma.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -541,7 +541,7 @@
     {
         "id": 52,
         "name": "La Maceta",
-        "imageName": "52_LaMaceta.png",
+        "imageName": "52_LaMaceta.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -551,7 +551,7 @@
     {
         "id": 53,
         "name": "El Arpa",
-        "imageName": "53_ElArpa.png",
+        "imageName": "53_ElArpa.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [
@@ -561,7 +561,7 @@
     {
         "id": 54,
         "name": "La Rana",
-        "imageName": "54_LaRana.png",
+        "imageName": "54_LaRana.webp",
         "imageUrl": "",
         "audioUrl": "",
         "script": [

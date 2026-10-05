@@ -1,3 +1,21 @@
+/* =========================
+   PALETA DEL PROYECTO
+   Fondo: coral #e15b64 -> durazno #f8b26a sobre crema #fffaaa
+   Cartas: verde azulado #0b5c5c, morado #4a1d78 y tinta oscura #1c1230
+   Se define global para que también la usen los modales (se dibujan fuera de los componentes).
+========================= */
+:root {
+  --coral: #e15b64;
+  --coral-dark: #c94550;
+  --durazno: #f8b26a;
+  --crema: #fffaaa;
+  --teal: #0b5c5c;
+  --teal-dark: #084848;
+  --morado: #4a1d78;
+  --morado-dark: #3a1660;
+  --tinta: #1c1230;
+}
+
 /* You can add global styles to this file, and also import other style files */
 .img-fluid {
     max-width: 100%;
@@ -77,8 +95,23 @@
 .palette1-bg5{
   background-color: #546C49;
 }
-body{
-  background-image: url('assets/img/horizontal-lines.svg');
-  background-size: cover;
-  background-repeat: no-repeat;
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #fffaaa; /* mismo tono que el fondo del SVG */
+}
+
+/* Fondo en una capa fija del tamaño de la pantalla: no se estira con el contenido
+   ni se mueve al hacer scroll, y se recalcula al girar el teléfono */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url('assets/img/horizontal-lines.svg') center / cover no-repeat;
+  pointer-events: none;
 }

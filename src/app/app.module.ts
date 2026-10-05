@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzSwitchModule } from 'ng-zorro-antd/switch';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -18,7 +18,6 @@ import { NzProgressModule } from 'ng-zorro-antd/progress';
 import { IndexComponent } from './components/index/index.component';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzCardModule } from 'ng-zorro-antd/card';
-import { NavigationComponent } from './components/navigation/navigation.component';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzPipesModule } from 'ng-zorro-antd/pipes';
@@ -29,8 +28,7 @@ registerLocaleData(es);
 @NgModule({
   declarations: [
     AppComponent,
-    IndexComponent,
-    NavigationComponent
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +45,7 @@ registerLocaleData(es);
     NzSelectModule,
     NzPipesModule,
     NzFormModule,
-    NzInputNumberModule,
+    NzSwitchModule,
     NzButtonModule
   ],
   providers: [

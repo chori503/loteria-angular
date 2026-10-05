@@ -3,6 +3,7 @@
 ========================= */
 .main-container {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +23,7 @@
 .card-game,
 .card-finish {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1000px;
   border-radius: 25px;
 }
 
@@ -30,24 +31,450 @@
    TEXTO
 ========================= */
 .card-name {
-  font-size: clamp(32px, 5vw, 60px);
+  color: var(--tinta);
+  font-size: clamp(26px, 4.5vw, 48px);
+  line-height: 1.15;
   text-align: center;
-  margin-bottom: 16px;
+  margin: 0 0 12px;
 }
 
 .text-center {
   text-align: center;
 }
 
+.loteria-script {
+  color: var(--tinta);
+  font-size: clamp(17px, 2.2vw, 26px);
+  line-height: 1.35;
+  text-align: center;
+  max-width: 760px;
+  min-height: 2.7em; /* reserva 2 líneas para que el layout no salte entre cartas */
+  margin: 16px auto 0;
+}
+
 /* =========================
-   IMÁGENES
+   JUEGO: CARTA + SEGUNDOS
+   --stage-size es la altura de la carta y el diámetro del círculo,
+   así ambos miden lo mismo y quedan alineados.
 ========================= */
-.img-fluid {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
+.game-stage {
+  /* Lado a lado: el ancho total es ~1.71 veces la altura (carta 336:474 + círculo) */
+  /* Alto reservado: nombre, verso, botón y tira de cartas que ya salieron (~490px) */
+  --stage-size: clamp(200px, min(calc(100dvh - 520px), calc((100vw - 140px) / 1.75)), 440px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(16px, 4vw, 56px);
+}
+
+.stage-card {
   display: block;
-  margin: auto;
+  height: var(--stage-size);
+  width: auto;
+  aspect-ratio: 336 / 474;
+}
+
+/* El avance se anima por frame desde el componente; la transición de ng-zorro lo haría ir con retraso */
+.stage-progress ::ng-deep .ant-progress-circle-path {
+  transition: none !important;
+}
+
+.stage-progress ::ng-deep .ant-progress-text {
+  color: var(--tinta) !important;
+}
+
+.stage-progress ::ng-deep .ant-progress-inner {
+  width: var(--stage-size) !important;
+  height: var(--stage-size) !important;
+  font-size: calc(var(--stage-size) * 0.15 + 6px) !important;
+}
+
+/* =========================
+   ACCIONES (botón + atajo)
+========================= */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.actions .btn-loteria {
+  margin: 20px auto 14px; /* deja lugar a la sombra sólida */
+}
+
+.key-hint {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.key-hint kbd {
+  color: var(--tinta);
+  display: inline-block;
+  padding: 1px 6px;
+  font-family: inherit;
+  font-size: 12px;
+  border: 1px solid #d9d9d9;
+  border-bottom-width: 2px;
+  border-radius: 4px;
+  background: #fafafa;
+}
+
+/* En pantallas táctiles no hay barra espaciadora */
+@media (hover: none) {
+  .key-hint {
+    display: none;
+  }
+}
+
+/* =========================
+   MODAL: CARTAS QUE YA SALIERON
+========================= */
+.discovered-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.discovered-card {
+  display: block;
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* =========================
+   GANASTE
+========================= */
+.finish-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+.finish-gif {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+/* =========================
+   HEADER: PAUSA Y AJUSTES
+========================= */
+/* Header compacto: el padding por defecto de ng-zorro le quita alto a la carta */
+.card-start ::ng-deep .ant-card-extra,
+.card-game ::ng-deep .ant-card-extra {
+  padding: 8px 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: rgba(225, 91, 100, 0.1);
+}
+
+.icon-btn:focus-visible {
+  outline: 3px solid var(--durazno);
+  outline-offset: 1px;
+}
+
+/* =========================
+   PAUSA
+========================= */
+.game-stage {
+  position: relative;
+}
+
+.game-stage.is-paused .stage-card,
+.game-stage.is-paused .stage-progress {
+  opacity: 0.45;
+  filter: grayscale(0.4);
+  transition: opacity 0.2s ease, filter 0.2s ease;
+}
+
+.pause-badge {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.55em 1.1em;
+  border: 2px solid var(--tinta);
+  border-radius: 10px;
+  background: var(--crema);
+  box-shadow: 0 4px 0 var(--tinta);
+  color: var(--tinta);
+  font-family: 'Rye', 'Georgia', serif;
+  font-size: clamp(14px, calc(0.8vw + 10px), 20px);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* =========================
+   CARTAS QUE YA SALIERON
+========================= */
+.history {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(28, 18, 48, 0.2);
+}
+
+.history-title {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: rgba(28, 18, 48, 0.65);
+}
+
+.history-strip {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+}
+
+.history-card {
+  flex: none;
+  height: 56px;
+  width: auto;
+  aspect-ratio: 336 / 474;
+}
+
+/* La más reciente un poco más grande */
+.history-card:first-child {
+  height: 64px;
+}
+
+/* =========================
+   MODAL ¡LOTERÍA!
+========================= */
+.modal-section + .modal-section {
+  margin-top: 20px;
+}
+
+.modal-label {
+  display: block;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: var(--tinta);
+}
+
+.card-search {
+  width: 100%;
+  max-width: 480px;
+}
+
+.table-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.table-btn {
+  padding: 6px 14px;
+  border: 2px solid var(--tinta);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--tinta);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 3px 0 var(--tinta);
+  transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.table-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 var(--tinta);
+}
+
+.table-btn.is-winner {
+  background: var(--teal);
+  color: var(--crema);
+}
+
+.table-btn.is-loser {
+  background: var(--coral);
+  color: #fff;
+}
+
+.table-btn.is-selected {
+  outline: 3px solid var(--durazno);
+  outline-offset: 2px;
+}
+
+.board-summary {
+  margin: 0 0 10px;
+  font-weight: 600;
+  color: var(--coral-dark);
+}
+
+.board-summary.is-winner {
+  color: var(--teal);
+}
+
+/* El tablero real: 4 x 4 cartas */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  max-width: 420px;
+}
+
+.board-cell {
+  position: relative;
+}
+
+.board-card {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.board-cell.is-missing .board-card {
+  opacity: 0.35;
+  filter: grayscale(1);
+}
+
+.board-mark {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+  background: var(--teal);
+  color: var(--crema);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.board-cell.is-missing .board-mark {
+  background: var(--coral);
+  color: #fff;
+}
+
+/* =========================
+   AJUSTES
+========================= */
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.setting + .setting {
+  border-top: 1px solid #f0f0f0;
+}
+
+.setting-label {
+  font-size: 15px;
+  color: var(--tinta);
+}
+
+.setting-note {
+  display: block;
+  color: rgba(28, 18, 48, 0.55);
+}
+
+/* Un solo campo con − y + integrados, al estilo de los inputs de ng-zorro */
+.stepper {
+  display: inline-flex;
+  align-items: stretch;
+  height: 40px;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stepper:hover {
+  border-color: var(--coral);
+}
+
+.stepper:focus-within {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 2px rgba(225, 91, 100, 0.2);
+}
+
+.stepper-btn {
+  width: 40px;
+  border: 0;
+  background: #fafafa;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.stepper-btn:first-child {
+  border-right: 1px solid #d9d9d9;
+}
+
+.stepper-btn:last-child {
+  border-left: 1px solid #d9d9d9;
+}
+
+.stepper-btn:hover:not(:disabled) {
+  background: #fff1f2;
+  color: var(--coral);
+}
+
+.stepper-btn:disabled {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+}
+
+.stepper-btn:focus-visible {
+  outline: none;
+  background: #fff1f2;
+  color: var(--coral);
+}
+
+.stepper-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 76px;
+  padding: 0 8px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.stepper-value small {
+  margin-left: 4px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.45);
 }
 
 /* =========================
@@ -59,92 +486,74 @@
   justify-content: center;
 }
 
+/* La paleta del proyecto (--coral, --teal, --tinta, ...) está en src/styles.css:
+   es global porque los modales se dibujan fuera de este componente. */
+
 /* =========================
    BOTONES
+   Como una pieza impresa de la lotería: color plano, contorno de tinta
+   y sombra sólida que se hunde al presionar.
 ========================= */
-.btn {
-  box-sizing: border-box;
-  appearance: none;
-  background-color: transparent;
-  border: 2px solid #e74c3c;
-  border-radius: 0.6em;
-  color: #e74c3c;
+.btn-loteria {
+  --face: var(--teal);
+  --face-hover: var(--teal-dark);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  padding: 0.7em 1.5em;
+  border: 2px solid var(--tinta);
+  border-radius: 10px;
+  background: var(--face);
+  box-shadow: 0 5px 0 var(--tinta);
+  color: var(--crema);
+  font-family: 'Rye', 'Georgia', serif;
+  font-size: clamp(16px, calc(1.2vw + 10px), 24px);
+  line-height: 1.1;
+  white-space: nowrap;
   cursor: pointer;
-  display: flex;
-  align-self: center;
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1;
-  margin: 20px auto;
-  padding: 1.2em 2.8em;
-  text-decoration: none;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.08s ease, box-shadow 0.08s ease, background-color 0.15s ease;
 }
 
-.btn:hover,
-.btn:focus {
-  color: #fff;
-  outline: 0;
+.btn-loteria:hover {
+  background: var(--face-hover);
 }
 
-/* Botón verde */
-.second {
-  border-radius: 3em;
-  border-color: #1abc9c;
-  color: #fff;
-  background-image: linear-gradient(
-    to right,
-    rgba(26, 188, 156, 0.6) 0%,
-    rgba(26, 188, 156, 0.6) 5%,
-    #1abc9c 5%,
-    #1abc9c 10%,
-    rgba(26, 188, 156, 0.6) 10%,
-    rgba(26, 188, 156, 0.6) 15%,
-    #1abc9c 15%,
-    #1abc9c 20%,
-    rgba(26, 188, 156, 0.6) 20%,
-    rgba(26, 188, 156, 0.6) 25%,
-    #1abc9c 25%,
-    #1abc9c 30%,
-    rgba(26, 188, 156, 0.6) 30%,
-    rgba(26, 188, 156, 0.6) 35%,
-    #1abc9c 35%,
-    #1abc9c 40%,
-    rgba(26, 188, 156, 0.6) 40%,
-    rgba(26, 188, 156, 0.6) 45%,
-    #1abc9c 45%,
-    #1abc9c 50%,
-    rgba(26, 188, 156, 0.6) 50%,
-    rgba(26, 188, 156, 0.6) 55%,
-    #1abc9c 55%,
-    #1abc9c 60%,
-    rgba(26, 188, 156, 0.6) 60%,
-    rgba(26, 188, 156, 0.6) 65%,
-    #1abc9c 65%,
-    #1abc9c 70%,
-    rgba(26, 188, 156, 0.6) 70%,
-    rgba(26, 188, 156, 0.6) 75%,
-    #1abc9c 75%,
-    #1abc9c 80%,
-    rgba(26, 188, 156, 0.6) 80%,
-    rgba(26, 188, 156, 0.6) 85%,
-    #1abc9c 85%,
-    #1abc9c 90%,
-    rgba(26, 188, 156, 0.6) 90%,
-    rgba(26, 188, 156, 0.6) 95%,
-    #1abc9c 95%,
-    #1abc9c 100%
-  );
-  background-size: 100%;
-  transition: background 300ms ease-in-out;
+.btn-loteria:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--tinta);
 }
 
-.second:hover {
-  background-position: 100px;
+.btn-loteria:focus-visible {
+  outline: 3px solid var(--durazno);
+  outline-offset: 4px;
+}
+
+/* Comenzar: verde azulado de los fondos de carta */
+.btn-start {
+  --face: var(--teal);
+  --face-hover: var(--teal-dark);
+}
+
+/* ¡Lotería!: el coral del fondo, el botón más importante del juego */
+.btn-grito {
+  --face: var(--coral);
+  --face-hover: var(--coral-dark);
+}
+
+/* Volver a jugar: morado de los fondos de carta */
+.btn-again {
+  --face: var(--morado);
+  --face-hover: var(--morado-dark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-loteria {
+    transition: none;
+  }
 }
 
 /* =========================
@@ -156,10 +565,13 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('/././assets/img/confetti.svg');
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  /* Ruta relativa a este archivo: el build la empaqueta en media/ y funciona con cualquier base-href (gh-pages) */
+  background-image: url('../../../assets/img/confetti.svg');
+  background-size: cover;
+  background-position: center;
+  /* Decorativo: no debe bloquear los clicks del botón "Volver a jugar" */
+  pointer-events: none;
+  z-index: 10;
 }
 
 /* =========================
@@ -168,16 +580,198 @@
 @media (max-width: 768px) {
 
   .main-container {
-    align-items: flex-start;
+    padding: 12px;
   }
 
-  .img-fluid {
-    max-width: 280px;
+  .card-start ::ng-deep .ant-card-head,
+  .card-game ::ng-deep .ant-card-head {
+    min-height: 44px;
+    padding: 0 12px;
   }
 
-  .btn {
-    font-size: 1.1rem;
-    padding: 0.8em 1.6em;
+  .card-start ::ng-deep .ant-card-body,
+  .card-game ::ng-deep .ant-card-body,
+  .card-finish ::ng-deep .ant-card-body {
+    padding: 16px;
+  }
+
+  .icon-btn {
+    font-size: 28px;
+  }
+
+  .history-card {
+    height: 48px;
+  }
+
+  .history-card:first-child {
+    height: 54px;
+  }
+
+  .finish-layout {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .discovered-grid {
+    grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+    gap: 8px;
+  }
+
+  .btn-loteria {
+    min-width: 0;
+    padding: 0.7em 1.3em;
+  }
+
+  .actions .btn-loteria {
+    margin: 14px auto 12px;
+  }
+
+  .loteria-script {
+    margin-top: 12px;
+  }
+
+}
+
+/* Celular: carta y círculo lado a lado con la misma altura.
+   Ancho disponible = viewport - márgenes (68px); alto reservado para nombre, texto y botón (330px). */
+@media (max-width: 600px) {
+
+  .game-stage {
+    --stage-size: clamp(120px, min(calc(100dvh - 400px), calc((100vw - 68px) / 1.71)), 300px);
+    gap: 12px;
+  }
+
+}
+
+/* Celular alto (2:1 o más): conviene apilarlos con el mismo ancho, así la carta sale más grande.
+   Alto total apilado = ~2.41 veces el ancho (carta 1.41 + círculo 1). */
+@media (max-width: 600px) and (max-aspect-ratio: 1/2) {
+
+  .game-stage {
+    --stage-size: clamp(140px, min(calc(100vw - 80px), calc((100dvh - 440px) / 2.41)), 300px);
+    flex-direction: column;
+  }
+
+  .stage-card {
+    width: var(--stage-size);
+    height: auto;
+  }
+
+}
+
+
+/* Teléfono en horizontal: poca altura, mucho ancho.
+   Carta y círculo a la izquierda (misma altura, ocupan todo el alto disponible)
+   y nombre, texto y botón en una columna a la derecha. */
+@media (orientation: landscape) and (max-height: 520px) {
+
+  .main-container {
+    padding: 8px 12px;
+  }
+
+  .card-start ::ng-deep .ant-card-head,
+  .card-game ::ng-deep .ant-card-head,
+  .card-finish ::ng-deep .ant-card-head {
+    min-height: 40px;
+    padding: 0 12px;
+  }
+
+  .card-start ::ng-deep .ant-card-body,
+  .card-game ::ng-deep .ant-card-body,
+  .card-finish ::ng-deep .ant-card-body {
+    padding: 12px 16px;
+  }
+
+  .icon-btn {
+    font-size: 24px;
+    padding: 2px;
+  }
+
+  .card-start ::ng-deep .ant-card-extra,
+  .card-game ::ng-deep .ant-card-extra {
+    padding: 6px 0;
+  }
+
+  .card-game ::ng-deep .ant-card-body {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: 1fr auto auto auto auto 1fr;
+    grid-template-areas:
+      "stage ."
+      "stage name"
+      "stage script"
+      "stage actions"
+      "stage history"
+      "stage .";
+    column-gap: 20px;
+    align-items: center;
+  }
+
+  .game-stage {
+    /* Alto disponible: viewport - header de la card - márgenes */
+    /* Limitado por el alto (header + márgenes) y por el ancho (deja ~240px para nombre, texto y botón) */
+    --stage-size: clamp(110px, min(calc(100dvh - 130px), calc((100vw - 340px) / 1.71)), 320px);
+    grid-area: stage;
+    flex-direction: row;
+    gap: 12px;
+  }
+
+  .stage-card {
+    height: var(--stage-size);
+    width: auto;
+  }
+
+  .card-name {
+    grid-area: name;
+    margin: 0;
+  }
+
+  .loteria-script {
+    grid-area: script;
+    min-height: 0;
+    margin-top: 8px;
+  }
+
+  .actions {
+    grid-area: actions;
+    align-self: start;
+  }
+
+  .history {
+    grid-area: history;
+    min-width: 0;
+    margin-top: 0;
+    padding-top: 6px;
+  }
+
+  .history-card {
+    height: 44px;
+  }
+
+  .history-card:first-child {
+    height: 48px;
+  }
+
+  .actions .btn-loteria {
+    margin: 12px auto 10px;
+  }
+
+  .card-finish .card-name {
+    margin-bottom: 8px;
+  }
+
+  .finish-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .finish-gif {
+    max-height: calc(100dvh - 120px);
+    width: auto;
+    max-width: 50%;
+    margin: 0;
   }
 
 }
