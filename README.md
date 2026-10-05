@@ -4,11 +4,11 @@ Aplicación web desarrollada con Angular que simula el juego tradicional de la l
 
 ## Descripción
 
-Este proyecto es una aplicación frontend construida con Angular 11 que implementa una versión digital del clásico juego de lotería. Está orientado a demostrar el manejo de componentes, eventos y renderizado dinámico, así como la integración de una interfaz moderna utilizando ng-zorro.
+Este proyecto es una aplicación frontend construida con Angular 22 que implementa una versión digital del clásico juego de lotería. Está orientado a demostrar el manejo de componentes, eventos y renderizado dinámico, así como la integración de una interfaz moderna utilizando ng-zorro.
 
 ## Tecnologías utilizadas
 
-Angular 11  
+Angular 22  
 TypeScript  
 RxJS  
 ng-zorro-antd  
@@ -54,10 +54,10 @@ dist/loteria
 
 ## Deploy en GitHub Pages
 
-Instalar dependencia compatible con Node 14:
+Instalar dependencia:
 
 ```bash
-npm install angular-cli-ghpages@0.6 --save-dev
+npm install angular-cli-ghpages --save-dev
 ```
 Generar build con base-href:
 
@@ -76,7 +76,7 @@ https://chori503.github.io/loteria-angular/
 
 El nombre correcto de la carpeta de salida es dist/loteria
 Es necesario usar --base-href /loteria-angular/ para que funcione en GitHub Pages
-Este proyecto usa Angular 11 y es compatible con Node.js 14
+Este proyecto usa Angular 22 y requiere Node.js 22.22+ o 24.15+ (probado con Node 24.21)
 
 ## Autor
-https://github.com/chori50
+https://github.com/chori503

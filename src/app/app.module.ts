@@ -9,8 +9,7 @@ import { es_ES } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
 import es from '@angular/common/locales/es';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideHttpClient } from '@angular/common/http';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
@@ -37,8 +36,6 @@ registerLocaleData(es);
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
@@ -53,7 +50,10 @@ registerLocaleData(es);
     NzInputNumberModule,
     NzButtonModule
   ],
-  providers: [{ provide: NZ_I18N, useValue: es_ES }],
+  providers: [
+    provideHttpClient(),
+    { provide: NZ_I18N, useValue: es_ES }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

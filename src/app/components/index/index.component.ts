@@ -1,14 +1,15 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { CardInfoDto } from 'src/app/dto/CardInfoDto';
-import LoteriaData from 'src/app/LoteriaData.json';
-import LoteriaTables from 'src/app/LoteriaTables.json';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { CardInfoDto } from '../../dto/CardInfoDto';
+import LoteriaData from '../../LoteriaData.json';
+import LoteriaTables from '../../LoteriaTables.json';
 import { NzInputNumberComponent } from 'ng-zorro-antd/input-number';
-import { NzButtonModule } from 'ng-zorro-antd/button';
 
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
   styleUrls: ['./index.component.css'],
+  standalone: false,
+  changeDetection: ChangeDetectionStrategy.Eager
 })
 export class IndexComponent implements OnInit {
 
